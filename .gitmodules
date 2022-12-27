@@ -1,0 +1,3 @@
+[submodule "kl/third_part/googletest"]
+	path = kl/third_part/googletest
+	url = https://github.com/rscuber/googletest.git
