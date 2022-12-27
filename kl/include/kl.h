@@ -49,7 +49,7 @@ namespace KL {
     PII BestMoves(const std::vector<std::pair<int, PII>> &order) const;
     void Recovery(const std::vector<std::pair<int, PII>> &order, int total, int actual);
     void RecordMoves(const std::vector<std::pair<int, KL::PII>> &order, int m, std::vector<KL::PII> &moves);
-    std::vector<PII> kl();
+    std::vector<PII> KL();
     void PrintMoves(const std::vector<PII> &moves) const;
 private:
     std::vector<std::vector<int>> mat; //adjcency matrix

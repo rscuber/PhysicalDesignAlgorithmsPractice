@@ -159,7 +159,7 @@ void KL::Graph::RecordMoves(const std::vector<std::pair<int, KL::PII>> &order, i
   return ;
 }
 
-std::vector<KL::PII> KL::Graph::kl() {
+std::vector<KL::PII> KL::Graph::KL() {
   std::vector<KL::PII> moves;
   InitialPartition();
   const int INF = 0x3f3f3f3f; //infinity
@@ -214,18 +214,3 @@ namespace {
   }
 
 } // anonymous namespace end
-
-
-/*
-int main() {
-  read();
-  KL::Graph g(v_nums, e_nums, edges);
-  std::vector<KL::PII> moves = kl(g);
-  std::cout << moves.size() << std::endl;
-  for (auto x : moves) {
-    std::cout << x.first << ", " << x.second << std::endl;
-  }
-  g.PrintMoves(moves);
-  return 0;
-}
-*/
