@@ -1,0 +1,5 @@
+set(SRC_LIST fm.cpp)
+add_library(fm ${SRC_LIST})
+#add_executable(fm ${SRC_LIST})
+#target_include_directories(../include)
+#set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
