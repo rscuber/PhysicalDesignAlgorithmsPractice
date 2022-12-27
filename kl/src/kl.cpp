@@ -10,8 +10,6 @@
 #include <climits>
 #include "../include/kl.h"
 
-std::vector<std::pair<int, int>> edges;
-int v_nums, e_nums;
 
 KL::Graph::Graph(int vertex_num, int edge_num, std::vector<PII> edges) : vertex_num_(vertex_num), edge_num_(edge_num), mat(vertex_num, std::vector<int>(vertex_num)), costs(vertex_num, 0) {
   for (auto edge : edges) {
@@ -203,6 +201,9 @@ std::vector<KL::PII> KL::Graph::kl() {
 }
 
 namespace {
+
+  std::vector<std::pair<int, int>> edges;
+  int v_nums, e_nums;
   void read() {
     std::cin >> v_nums >> e_nums;
     for (int i = 0, start, end; i < e_nums; i++) {
