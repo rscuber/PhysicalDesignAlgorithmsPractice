@@ -8,8 +8,10 @@
 #include <iostream>
 #include <vector>
 #include <climits>
-#include "../include/kl.h"
+#include "kl.h"
 
+std::vector<std::pair<int, int>> edges;
+int v_nums, e_nums;
 
 KL::Graph::Graph(int vertex_num, int edge_num, std::vector<PII> edges) : vertex_num_(vertex_num), edge_num_(edge_num), mat(vertex_num, std::vector<int>(vertex_num)), costs(vertex_num, 0) {
   for (auto edge : edges) {
@@ -159,7 +161,7 @@ void KL::Graph::RecordMoves(const std::vector<std::pair<int, KL::PII>> &order, i
   return ;
 }
 
-std::vector<KL::PII> KL::Graph::KL() {
+std::vector<KL::PII> KL::Graph::kl() {
   std::vector<KL::PII> moves;
   InitialPartition();
   const int INF = 0x3f3f3f3f; //infinity
@@ -201,9 +203,6 @@ std::vector<KL::PII> KL::Graph::KL() {
 }
 
 namespace {
-
-  std::vector<std::pair<int, int>> edges;
-  int v_nums, e_nums;
   void read() {
     std::cin >> v_nums >> e_nums;
     for (int i = 0, start, end; i < e_nums; i++) {
@@ -214,3 +213,18 @@ namespace {
   }
 
 } // anonymous namespace end
+
+
+/*
+int main() {
+  read();
+  KL::Graph g(v_nums, e_nums, edges);
+  std::vector<KL::PII> moves = kl(g);
+  std::cout << moves.size() << std::endl;
+  for (auto x : moves) {
+    std::cout << x.first << ", " << x.second << std::endl;
+  }
+  g.PrintMoves(moves);
+  return 0;
+}
+*/

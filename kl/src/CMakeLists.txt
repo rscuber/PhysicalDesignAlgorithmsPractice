@@ -1,5 +1,6 @@
 set(SRC_LIST kl.cpp)
 add_library(kl ${SRC_LIST})
-#add_executable(kl ${SRC_LIST})
-#target_include_directories(../include)
-#set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+target_include_directories(kl
+PUBLIC
+  ../include
+)

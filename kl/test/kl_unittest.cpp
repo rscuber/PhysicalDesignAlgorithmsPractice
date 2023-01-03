@@ -35,26 +35,26 @@ TEST(Graph, InitialPartition) {
 }
 
 
-TEST(Graph, DeltaGain) {
+TEST(Graph, detla_gain) {
   int vertex_num = 8, edge_num = 13;
   std::vector<std::pair<int, int>> edges{
     {0, 1}, {0, 4}, {0, 5}, {1, 4}, {1, 5}, {2, 3}, {2, 5}, 
     {2, 6}, {2, 7}, {3, 6}, {3, 7}, {4, 5}, {6, 7}
   };
   KL::Graph g(vertex_num, edge_num, edges);
-  g.KL();
+  g.kl();
   EXPECT_EQ(g.DeltaGain(0, 6), -6);
   EXPECT_EQ(g.DeltaGain(1, 7), -6);
 }
 
-TEST(Graph, KL) {
+TEST(Graph, kl) {
   int vertex_num = 8, edge_num = 13;
   std::vector<std::pair<int, int>> edges{
       {0, 1}, {0, 4}, {0, 5}, {1, 4}, {1, 5}, {2, 3}, {2, 5}, 
       {2, 6}, {2, 7}, {3, 6}, {3, 7}, {4, 5}, {6, 7}
   };
   KL::Graph g(vertex_num, edge_num, edges);
-  std::vector<KL::PII> moves = g.KL();
+  std::vector<KL::PII> moves = g.kl();
   ASSERT_EQ(moves.size(), 2);
   ASSERT_EQ(moves[0].first, 2);
   ASSERT_EQ(moves[0].second, 4);
