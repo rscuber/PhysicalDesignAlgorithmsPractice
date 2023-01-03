@@ -70,6 +70,7 @@ namespace {
 
 } // end anonymous namespace
 
+/*
 int main() {
   read();
   MST::Graph g(g_vertex_num, g_arc_num, g_edgs);
@@ -77,3 +78,4 @@ int main() {
   printf("sum = %lld\n", sum > 0 ? sum : -1);
   return 0;
 }
+*/
