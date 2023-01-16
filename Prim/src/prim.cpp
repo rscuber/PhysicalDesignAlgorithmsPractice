@@ -8,7 +8,6 @@
 #include <iostream>
 #include <cinttypes>
 #include <vector>
-//#include "../include/prim.h"
 #include "prim.h"
 
  /*
